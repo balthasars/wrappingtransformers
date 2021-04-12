@@ -91,3 +91,15 @@ or use Conda:
 reticulate::use_condaenv(condaenv = "myenv")
 ```
 
+## Using the models
+
+### `flair/german-ner-large`
+
+Here's how to use the NER tagger:
+
+```{r}
+wt_load_model(model_name = "ner_german_large")
+sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
+wt_predict_labels_ner_german_large(sentence = sentence_example)
+```
+
