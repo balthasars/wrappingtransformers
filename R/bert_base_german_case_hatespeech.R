@@ -54,10 +54,3 @@ wt_predict_bert_base_german_cased_hatespeech <- function(sentence) {
 
   prediction_tbl
 }
-
-# source(here::here("R", "global_helpers.R"))
-# reticulate::use_python(python = "/usr/local/bin/python3.9", required = TRUE)
-# reticulate::use_virtualenv(virtualenv = "wrappingtransformers", required = TRUE)
-# load_bert_base_german_cased_hatespeech()
-# sentence_example <- "Der Wichser muss raus."
-# wt_predict_bert_base_german_cased_hatespeech(sentence = sentence_example)

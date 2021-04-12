@@ -42,7 +42,8 @@ remotes::install_github("balthasars/wrappingtransformers") # Install this packag
 
 Discover what version of Python will be used unless you set it manually
 as suggested below. [transformers is tested with Python
-3.6](https://github.com/huggingface/transformers).
+3.6](https://github.com/huggingface/transformers). In my experience
+&gt;= 3.9 works best.
 
 ``` r
 reticulate::py_discover_config()
@@ -100,8 +101,21 @@ reticulate::use_condaenv(condaenv = "myenv")
 Here’s a full example on how to use the NER tagger:
 
 ``` r
-reticulate::use_python(python = "/usr/local/bin/python3.9")
-wt_load_model(model_name = "ner_german_large")
+reticulate::use_python(python = "/usr/local/bin/python3.9", required = TRUE)
+reticulate::use_virtualenv("wrappingtransformers", required = TRUE)
+wt_load_model(model_name = "ner-german-large")
 sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
 wt_predict_labels_ner_german_large(sentence = sentence_example)
+```
+
+### `deepset/bert-base-german-cased-hatespeech-GermEval18Coarse`
+
+Here’s a full example on how to perform sequence classification:
+
+``` r
+reticulate::use_python(python = "/usr/local/bin/python3.9", required = TRUE)
+reticulate::use_virtualenv(virtualenv = "wrappingtransformers", required = TRUE)
+load_bert_base_german_cased_hatespeech()
+sentence_example <- "Der Wichser muss raus."
+wt_predict_bert_base_german_cased_hatespeech(sentence = sentence_example)
 ```
