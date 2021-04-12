@@ -97,9 +97,10 @@ reticulate::use_condaenv(condaenv = "myenv")
 
 ### `flair/german-ner-large`
 
-Here’s how to use the NER tagger:
+Here’s a full example on how to use the NER tagger:
 
 ``` r
+reticulate::use_python(python = "/usr/local/bin/python3.9")
 wt_load_model(model_name = "ner_german_large")
 sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
 wt_predict_labels_ner_german_large(sentence = sentence_example)
