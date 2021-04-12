@@ -19,7 +19,7 @@ wt_load_model("ner_german_large")
 # example sentence
 sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
 # get predictions
-predict_labels_ner_german_large(sentence = sentence_example)
+wt_predict_labels_ner_german_large(sentence = sentence_example)
 }
 }
 \seealso{

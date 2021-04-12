@@ -1,4 +1,4 @@
-# helper for `predict_labels_ner_german_large_()`
+# helper for `wt_predict_labels_ner_german_large_()`
 make_wide_tbl <- function(list_input) {
   purrr::map_df(list_input, ~ {
     tidyr::pivot_wider(.x) %>%
@@ -45,7 +45,7 @@ ner_german_large_tagger = SequenceTagger.load('flair/ner-german-large')
 #' # example sentence
 #' sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
 #' # get predictions
-#' predict_labels_ner_german_large(sentence = sentence_example)
+#' wt_predict_labels_ner_german_large(sentence = sentence_example)
 #' }
 #' @export
 wt_predict_labels_ner_german_large <- function(sentence) {
