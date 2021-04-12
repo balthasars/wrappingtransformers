@@ -20,6 +20,7 @@ load_ner_german_large <- function() {
   import_python_module_to_globalenv(module_name = "flair")
 
   # download and initialize sequence tagger
+  cli::cli_h1("Now loading flair/ner-german-large")
   ner_german_large_tagger <<- reticulate::py_run_string(
 "
 from flair.data import Sentence

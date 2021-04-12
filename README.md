@@ -95,7 +95,7 @@ reticulate::use_condaenv(condaenv = "myenv")
 
 ## Using the models
 
-\#\#\# `flair/german-ner-large`
+### `flair/german-ner-large`
 
 Here’s how to use the NER tagger:
 
