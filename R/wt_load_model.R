@@ -1,10 +1,15 @@
 #' Load one of the implemented models and initialize
 #'
-#' Loads one of the implemented models (so far only 'flair/ner-german-large') and initializes it.
-#' @param model_name Character vector specifying the name of the model to be loaded.
+#' Loads one of the following models:
+#' \enumerate{
+#'    \item flair/ner-german-large
+#'    \item deepset/bert-base-german-cased-hatespeech-GermEval18Coarse
+#' }
+#' @param model_name Character vector specifying the name of the model (without author) to be loaded.
 #' @examples
 #' \dontrun{
-#' wt_load_model(model_name = "ner_german_large")
+#' wt_load_model(model_name = "ner-german-large")
+#' wt_load_model(model_name = "bert-base-german-cased-hatespeech-GermEval18Coarse")
 #' }
 #' @export
 wt_load_model <- function(model_name) {
@@ -17,12 +22,13 @@ wt_load_model <- function(model_name) {
     msg = paste(
       "model_name must be one of the following:",
       paste(supported_models,
-            collapse = ", "
+        collapse = ", "
       )
     )
   )
 
   switch(model_name,
-         "ner_german_large" = load_ner_german_large()
+    "ner-german-large" = load_ner_german_large(),
+    "bert-base-german-cased-hatespeech-GermEval18Coarse" = load_bert_base_german_cased_hatespeech()
   )
 }

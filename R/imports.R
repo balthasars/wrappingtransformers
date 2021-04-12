@@ -1,7 +1,7 @@
 #' @import reticulate
 #' @importFrom assertthat assert_that
-#' @importFrom purrr map map_chr map_df
-#' @importFrom tibble enframe
+#' @importFrom purrr map map_chr map_df map_dfr
+#' @importFrom tibble enframe as_tibble
 #' @importFrom tidyr pivot_wider unnest separate
 #' @importFrom dplyr mutate_if mutate
 #' @importFrom stringr str_squish
