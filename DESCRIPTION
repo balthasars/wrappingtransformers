@@ -1,7 +1,7 @@
 Package: wrappingtransformers
 Type: Package
 Title: Wrappers for some transformers models
-Version: 0.1.0
+Version: 0.2.0
 Author: Balthasar Sager [aut, cre]
 Maintainer: Balthasar Sager <balthasar@balthasar.help>
 Description: R wrapper to some models hosted on Hugging Face.
