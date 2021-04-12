@@ -42,7 +42,7 @@ ner_german_large_tagger = SequenceTagger.load('flair/ner-german-large')
 #' further information about this model.
 #' @examples
 #' \dontrun{
-#' wt_load_model("ner_german_large")
+#' wt_load_model("ner-german-large")
 #' # example sentence
 #' sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
 #' # get predictions

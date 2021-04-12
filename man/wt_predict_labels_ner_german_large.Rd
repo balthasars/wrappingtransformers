@@ -15,7 +15,7 @@ of tokens classified as named entities including probabilities.
 }
 \examples{
 \dontrun{
-wt_load_model("ner_german_large")
+wt_load_model("ner-german-large")
 # example sentence
 sentence_example <- "Santesuisse und Curaviva fordern eine Umverteilung"
 # get predictions

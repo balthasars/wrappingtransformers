@@ -7,13 +7,18 @@
 wt_load_model(model_name)
 }
 \arguments{
-\item{model_name}{Character vector specifying the name of the model to be loaded.}
+\item{model_name}{Character vector specifying the name of the model (without author) to be loaded.}
 }
 \description{
-Loads one of the implemented models (so far only 'flair/ner-german-large') and initializes it.
+Loads one of the following models:
+\enumerate{
+   \item flair/ner-german-large
+   \item deepset/bert-base-german-cased-hatespeech-GermEval18Coarse
+}
 }
 \examples{
 \dontrun{
-wt_load_model(model_name = "ner_german_large")
+wt_load_model(model_name = "ner-german-large")
+wt_load_model(model_name = "bert-base-german-cased-hatespeech-GermEval18Coarse")
 }
 }
