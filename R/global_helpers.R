@@ -28,3 +28,13 @@ import_python_module_to_globalenv <- function(module_name){
 }
 # reticulate::use_python(python = "/usr/local/bin/python3.9")
 # import_python_module_to_globalenv("flair")
+
+fix_parallelism_warning <- function(){
+  # https://stackoverflow.com/questions/62691279/how-to-disable-tokenizers-parallelism-true-false-warning
+  reticulate::py_run_string(
+'
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+'
+  )
+}

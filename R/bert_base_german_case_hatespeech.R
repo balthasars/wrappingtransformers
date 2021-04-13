@@ -15,6 +15,8 @@ load_bert_base_german_cased_hatespeech <- function() {
   # download and initialize sequence tagger
   cli::cli_h1("Now loading deepset/bert-base-german-cased-hatespeech-GermEval18Coarse")
 
+  fix_parallelism_warning()
+
   bert_base_german_cased_hatespeech <<-  reticulate::py_run_string(
     '
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
