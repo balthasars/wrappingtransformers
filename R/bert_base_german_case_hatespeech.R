@@ -39,7 +39,7 @@ nlp = pipeline("sentiment-analysis", model = model_name)
 #' further information about this model.
 #' @examples
 #' \dontrun{
-#' wt_load_model("ner_german_large")
+#' wt_load_model("bert-base-german-cased-hatespeech-GermEval18Coarse")
 #' # example sentence
 #' sentence_example <- "Der Wichser muss raus."
 #' # get predictions
