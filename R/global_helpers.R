@@ -1,4 +1,4 @@
-supported_models <- c("ner_german_large", "bert-base-german-cased-hatespeech-GermEval18Coarse")
+supported_models <- c("ner-german-large", "bert-base-german-cased-hatespeech-GermEval18Coarse")
 
 # helper for model loading functions
 check_and_stop_if_python_module_not_available <- function(module) {
